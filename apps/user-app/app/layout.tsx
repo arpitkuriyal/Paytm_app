@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Providers } from "./providers";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "paytm_app",
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-        <body >{children}</body>
+        <body>{children}</body>
       </Providers>
     </html>
   );

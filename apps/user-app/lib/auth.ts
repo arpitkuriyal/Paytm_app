@@ -3,7 +3,7 @@ import { prisma } from "@repo/db/client"
 import bcrypt from "bcrypt";
 import {userSchema} from "@repo/schema/userSchema"
 import { JWT } from "next-auth/jwt";
-import { AuthOptions, Session } from "next-auth";
+import { AuthOptions } from "next-auth";
 
 export const authOptions:AuthOptions = {
     providers: [
