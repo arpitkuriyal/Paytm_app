@@ -1,7 +1,7 @@
 import CredentialsProvider from "next-auth/providers/credentials"
 import { prisma } from "@repo/db/client"
 import bcrypt from "bcrypt";
-import {userSchema} from "@repo/schema/userSchema"
+import {userSchema} from "@repo/schema/Schema"
 import { JWT } from "next-auth/jwt";
 import { AuthOptions } from "next-auth";
 
@@ -65,7 +65,11 @@ export const authOptions:AuthOptions = {
         async session({ token, session }: { token: JWT; session: any }) {
             session.user.id = token.sub;
             return session;
+          },
+          async redirect() {
+            return Promise.resolve('/dashboard');
           }
-    }
+    }, 
+    
   }
  

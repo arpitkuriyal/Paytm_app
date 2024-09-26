@@ -1,5 +1,5 @@
 {
-  "name": "@repo/schema",
+  "name": "bank-webhook",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "zod": "^3.23.8"
-  },
-  "exports":{
-    "./Schema":"./user.ts"
+    "@types/express": "^4.17.21",
+    "esbuild": "^0.24.0",
+    "express": "^4.21.0",
+    "@repo/db":"*"
   }
 }
