@@ -5,7 +5,7 @@ import {userSchema} from "@repo/schema/Schema"
 import { JWT } from "next-auth/jwt";
 import { AuthOptions } from "next-auth";
 
-export const authOptions:AuthOptions = {
+export const authOptions = {
     providers: [
       CredentialsProvider({
           name: 'phone Number',
@@ -62,7 +62,7 @@ export const authOptions:AuthOptions = {
     ],
     secret: process.env.JWT_SECRET,
     callbacks: {
-        async session({ token, session }: { token: JWT; session: any }) {
+        async session({ token, session }: { token:JWT; session: any }) {
             session.user.id = token.sub;
             return session;
           },
