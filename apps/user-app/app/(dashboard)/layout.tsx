@@ -8,7 +8,7 @@ export default function  Layout({children}:Readonly<{children:ReactNode}>){
             <div className="flex flex-col border-r-2 min-h-[780px] w-72 pt-52 gap-4 cursor-pointer pl-7">
                 <Sidebar title={"Dashboard"} href={"/dashboard"} logo={<HomeIcon/>}/>
                 <Sidebar title={"Transactions"} href={"/transactions"} logo={<TransactionsIcon/>} />
-                <Sidebar title={"Transfer"} href={"/transfer"} logo={<TransferIcon/>} />
+                <Sidebar title={"p2p"} href={"/p2p"} logo={<TransferIcon/>} />
             </div>
                 {children}
 

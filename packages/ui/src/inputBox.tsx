@@ -1,11 +1,16 @@
 "use client"
-export function  InputBox({title,placeholder,type}:{title:string,placeholder:string,type:string,}){
-    return (<div className="my-4 flex flex-col">
-             <label className="font-semibold">{title}</label>
-             <input className="appearance-none p-3 border rounded-md"  placeholder={placeholder} type={type}/>
-            </div>
-      
 
-
-    )
+export const InputBox = ({
+    placeholder,
+    onChange,
+    label
+}: {
+    placeholder: string;
+    onChange: (value: string) => void;
+    label: string;
+}) => {
+    return <div className="pt-2">
+        <label className="block mb-2 text-sm font-medium text-gray-900">{label}</label>
+        <input onChange={(e) => onChange(e.target.value)} type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder={placeholder} />
+    </div>
 }

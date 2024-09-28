@@ -46,6 +46,14 @@ export const authOptions = {
                             password: hashedPassword
                         }
                     });
+                    await prisma.balance.create({
+                        data:{
+                            amount:0,
+                            locked:0,
+                            userId:user.id
+                            
+                        }
+                    })
                 
                     return {
                         id: user.id.toString(),

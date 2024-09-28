@@ -1,5 +1,5 @@
 import { Transactions } from "../../../components/transactions";
 
 export default function Page(){
-    return <Transactions/>
+    return <div>helo</div>
 }
