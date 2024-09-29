@@ -23,6 +23,8 @@ async function  getOnRampTransactions(){
         }
     })
 }
+
+
 async function getBalance(){
     
     const session = await getServerSession(authOptions);
